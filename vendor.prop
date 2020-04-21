@@ -97,6 +97,13 @@ debug.stagefright.omx_default_rank=0
 # Display post-processing
 ro.vendor.display.cabl=2
 
+# Dalvik
+dalvik.vm.heapmaxfree=8m
+dalvik.vm.heapminfree=512k
+dalvik.vm.heapsize=512m
+dalvik.vm.heapstartsize=8m
+dalvik.vm.heaptargetutilization=0.75
+
 # DRM
 drm.service.enabled=true
 
