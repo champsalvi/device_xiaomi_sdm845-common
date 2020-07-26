@@ -13,9 +13,9 @@ INITIAL_COPYRIGHT_YEAR=2018
 MY_DIR="${BASH_SOURCE%/*}"
 if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-SUPERIOR_ROOT="${MY_DIR}/../../.."
+REVENGEOS_ROOT="${MY_DIR}/../../.."
 
-HELPER="${SUPERIOR_ROOT}/vendor/superior/build/tools/extract_utils.sh"
+HELPER="${REVENGEOS_ROOT}/vendor/revengeos/build/tools/extract_utils.sh"
 if [ ! -f "${HELPER}" ]; then
     echo "Unable to find helper script at ${HELPER}"
     exit 1
@@ -23,7 +23,7 @@ fi
 source "${HELPER}"
 
 # Initialize the helper for common
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${SUPERIOR_ROOT}" true
+setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${REVENGEOS_ROOT}" true
 
 # Copyright headers and guards
 write_headers "beryllium dipper equuleus perseus polaris ursa"
@@ -37,7 +37,7 @@ write_footers
 if [ -s "${MY_DIR}/../${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
     INITIAL_COPYRIGHT_YEAR="$DEVICE_BRINGUP_YEAR"
-    setup_vendor "${DEVICE}" "${VENDOR}" "${SUPERIOR_ROOT}" false
+    setup_vendor "${DEVICE}" "${VENDOR}" "${REVENEGOS_ROOT}" false
 
     # Copyright headers and guards
     write_headers
