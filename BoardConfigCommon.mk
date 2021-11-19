@@ -167,3 +167,6 @@ WPA_SUPPLICANT_VERSION := VER_0_8_X
 
 # Inherit from the proprietary version
 -include vendor/xiaomi/sdm845-common/BoardConfigVendor.mk
+
+#Enable sepolicy neverallow
+SELINUX_IGNORE_NEVERALLOWS := true
